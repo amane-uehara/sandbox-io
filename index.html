@@ -8,26 +8,12 @@
 </head>
 <body>
 
-<script>
-//var element = document.createElement('div')
-//element.setAttribute("data-wgo", "(;GM[1]SZ[13]KM[7.0]RU[Chinese]PB[kuro]PW[siro];B[jc];W[dj];B[kj];W[dc])");
-//element.setAttribute("style", "width: 60%; margin: 0");
-//element.textContent = "Sorry, your browser doesn't support WGo.js."
-</script>
-
-<div id="player1" style="width:650px"></div>
-<textarea style="width:450px;height:2em;margin-top:10px;margin-bottom:40px;" onclick="this.select()"></textarea>
+<div id="goban" style="width:650px"></div>
 
 <script type="text/javascript">
-var queryString = window.location.search;
-var queryObject = new Object();
-if(queryString){
-  queryString = queryString.substring(1);
-  alert(queryString);
-}
-
+var queryString = window.location.search.substring(1);
 window.addEventListener('load', function() {
-  var elem = document.getElementById("player1");
+  var elem = document.getElementById("goban");
   var player = new WGo.BasicPlayer(elem, {sgf:queryString});
   elem.nextSibling.nextSibling.textContent = player.kifu.toSgf().replace(/(\r\n|\n|\r)/gm,"");
 });
