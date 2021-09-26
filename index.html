@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-
+<script type="text/javascript" src="wgo/wgo.min.js"></script>
+<script type="text/javascript" src="wgo/wgo.player.min.js"></script>
 <link rel="stylesheet" type="text/css" href="wgo/wgo.player.css" />
 </head>
 <body>
@@ -11,10 +12,8 @@
 var element = document.createElement('div')
 element.setAttribute("data-wgo", "(;GM[1]SZ[13]KM[7.0]RU[Chinese]PB[kuro]PW[siro];B[jc];W[dj];B[kj];W[dc])");
 element.setAttribute("style", "width: 60%; margin: 0");
+element.textContent = "Sorry, your browser doesn't support WGo.js."
 </script>
-
-<script type="text/javascript" src="wgo/wgo.min.js"></script>
-<script type="text/javascript" src="wgo/wgo.player.min.js"></script>
 
 <script>
 var queryString = window.location.search;
