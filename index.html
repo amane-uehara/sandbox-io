@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 
+<script type="text/javascript" src="wgo/wgo.min.js"></script>
+<script type="text/javascript" src="wgo/wgo.player.min.js"></script>
+<link rel="stylesheet" type="text/css" href="wgo/wgo.player.css" />
+</head>
+<body>
+
 <script>
 var queryString = window.location.search;
 var queryObject = new Object();
@@ -10,16 +16,11 @@ if(queryString){
   queryString = queryString.substring(1);
   alert(queryString);
 }
-document.getElementById("goban").setAttribute("data-wgo","(;GM[1]SZ[13]KM[7.0]RU[Chinese]PB[kuro]PW[siro];B[jc];W[dj];B[kj];W[dc])");
+
+var elem = document.createElement('div');
+elem.data-wgo = '(;GM[1]SZ[13]KM[7.0]RU[Chinese]PB[kuro]PW[siro];B[jc];W[dj];B[kj];W[dc])';
+elem.style = 'width: 60%; margin: 0';
 </script>
-
-<script type="text/javascript" src="wgo/wgo.min.js"></script>
-<script type="text/javascript" src="wgo/wgo.player.min.js"></script>
-<link rel="stylesheet" type="text/css" href="wgo/wgo.player.css" />
-</head>
-<body>
-
-<div id="goban" style="width: 60%; margin: 0">
 
 Sorry, your browser doesn't support WGo.js.
 </div>
