@@ -2,7 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>WGo</title>
+
+<script>
+var queryString = window.location.search;
+var queryObject = new Object();
+if(queryString){
+  queryString = queryString.substring(1);
+  alert(queryString);
+}
+</script>
+
 <script type="text/javascript" src="wgo/wgo.min.js"></script>
 <script type="text/javascript" src="wgo/wgo.player.min.js"></script>
 <link rel="stylesheet" type="text/css" href="wgo/wgo.player.css" />
