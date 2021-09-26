@@ -1,26 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<meta charset="utf-8">
-<script type="text/javascript" src="wgo/wgo.min.js"></script>
-<script type="text/javascript" src="wgo/wgo.player.min.js"></script>
-<link rel="stylesheet" type="text/css" href="wgo/wgo.player.css" />
-</head>
 <body>
-
-<div id="goban" style="width:650px"></div>
-
-<script type="text/javascript">
-var queryString = window.location.search.substring(1);
-window.addEventListener('load', function() {
-  var elem = document.getElementById("goban");
-  var player = new WGo.BasicPlayer(elem, {sgf:queryString});
-  elem.nextSibling.nextSibling.textContent = player.kifu.toSgf().replace(/(\r\n|\n|\r)/gm,"");
-});
-</script>
-
-original repository
-https://github.com/waltheri/wgo.js
-
+hello world
 </body>
 </html>
